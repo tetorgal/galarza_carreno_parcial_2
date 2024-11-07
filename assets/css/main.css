@@ -1796,8 +1796,10 @@ input, select, textarea {
 		}
 
 		.image.featured {
-			display: block;
-			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 30%;
 			margin: 0 0 4em 0;
 		}
 
@@ -2197,6 +2199,7 @@ input, select, textarea {
 			position: relative;
 			z-index: 1;
 			margin: 0;
+			align-items: center;
 			display: inline-block;
 			vertical-align: middle;
 		}
@@ -2786,7 +2789,16 @@ input, select, textarea {
 		/* Image */
 
 			.image.featured {
-				margin: 0 0 2em 0;
+				display: block;
+				width: auto;
+				max-width: 100%;
+				margin: 0 auto; /* Centra la imagen horizontalmente */
+				padding-top: 1em;
+			}
+			.image.featured img {
+				width: 100%; /* Ajusta el tamaño de la imagen al ancho del contenedor */
+				max-width: 100%; /* Limita el tamaño máximo de la imagen */
+				height: auto; /* Mantiene la proporción de la imagen */
 			}
 
 			.image.left {
@@ -3058,6 +3070,7 @@ input, select, textarea {
 				}
 
 				#header header > p {
+					text-align: center;
 					font-size: 1em;
 				}
 
